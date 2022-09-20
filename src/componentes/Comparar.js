@@ -5,20 +5,18 @@ export let resultadoB = 0;
 
 export function comparar({ tentativa }, { senhaOficial }) {
 
+  console.log("jknde")
+
   resultadoA = 0;
   resultadoB = 0;
 
-  if (tentativa === senhaOficial) {
+  if (tentativa.length != senhaOficial.length) {
+    alert(`A senha tem ${senhaOficial.length} dígitos, tente novamente`);
+  }
+  else if (tentativa === senhaOficial) {
     alert("Parabéns, você ganhou");
 
   } else {
-
-    let numeros = [];
-
-    for (let a = 0; a < senhaOficial.length; a++) {
-      numeros[a] = senhaOficial[a];
-      //console.log(letras)
-    }
 
     for (let i = 0; i < tentativa.length; i++) {
 
